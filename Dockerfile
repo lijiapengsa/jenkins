@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y git curl zip python  python-pip && rm -
 
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
+RUN echo "Asia/shanghai" > /etc/timezone;
 
 ARG user=jenkins
 ARG group=jenkins
